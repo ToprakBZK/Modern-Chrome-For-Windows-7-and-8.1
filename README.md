@@ -1,4 +1,4 @@
-# Chrome 134 for Windows 7 and 8.1
+# Modern Chrome for Windows 7 and 8.1
 
 This repository contains a modified version of **Google Chrome 134** that has been patched to run on **Windows 8.1 and 7**, which is no longer officially supported by Google.
 
@@ -8,7 +8,7 @@ This repository contains a modified version of **Google Chrome 134** that has be
 
 ## 🔧 Features
 
-- Based on the official Chrome 134 build
+- Based on the official Chrome build
 - Compatibility fixes for Windows 7 and 8.1
 - Removed/adjusted dependencies that caused crashes or startup issues
 - Works without the need for newer Windows 10/11 APIs

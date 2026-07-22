@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Chrome</title>
-    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI&display=swap" rel="stylesheet">
+    <title>Modern Chrome for Windows 7 & 8.1</title>
+    <link rel="icon" type="image/png" href="mor_logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -27,6 +28,7 @@
             font-size: 32px;
             margin-bottom: 30px;
             color: #a020f0;
+            text-align: center;
         }
 
         .grid {
@@ -46,11 +48,11 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            transition: background-color 0.3s;
+            transition: transform 0.2s, background-color 0.3s;
         }
 
         .tile:hover {
-            background-color: #4b0082;
+            background-color: #3b0a6b;
         }
 
         .tile h2 {
@@ -60,28 +62,32 @@
 
         .tile p {
             font-size: 16px;
+            line-height: 1.5;
         }
 
         .download-button {
             background-color: #6a0dad;
             color: white;
-            padding: 15px 30px;
+            padding: 12px 24px;
             border: none;
             border-radius: 8px;
-            font-size: 18px;
+            font-size: 16px;
+            font-weight: 600;
             margin-top: 15px;
             cursor: pointer;
             text-decoration: none;
+            transition: background-color 0.2s;
         }
 
         .download-button:hover {
-            background-color: #7f00ff;
+            background-color: #8a2be2;
         }
 
         footer {
             margin-top: 40px;
             font-size: 14px;
             color: gray;
+            text-align: center;
         }
     </style>
 </head>
@@ -92,23 +98,28 @@
     <div class="grid">
         <div class="tile">
             <h2>System Requirements</h2>
-            <p>Windows 8.1<br>Windows 8.0<br>Windows 7</p>
+            <p>
+                Windows 7 / 8 / 8.1 (x86 & x64)<br>
+                2 GB of RAM<br>
+                No kernel patches required
+            </p>
         </div>
 
         <div class="tile">
             <h2>Download</h2>
-            <a class="download-button" href="https://github.com/ToprakBZK/Modern-Chrome-134-For-Windows-7-and-8.1/releases" target="_blank">Download</a>
+            <p>Get the latest working build for legacy Windows.</p>
+            <a class="download-button" href="https://github.com/ToprakBZK/Modern-Chrome-For-Windows-7-and-8.1/releases" target="_blank">Download Releases</a>
         </div>
 
         <div class="tile">
-            <h2>Release Notes</h2>
-            <p>Visit my GitHub page for more details.</p>
-            <a class="download-button" href="https://github.com/ToprakBZK/Modern-Chrome-134-For-Windows-7-and-8.1" target="_blank">GitHub</a>
+            <h2>Source & Notes</h2>
+            <p>Check release notes and build details on GitHub.</p>
+            <a class="download-button" href="https://github.com/ToprakBZK/Modern-Chrome-For-Windows-7-and-8.1" target="_blank">GitHub Repository</a>
         </div>
     </div>
 
     <footer>
-        &copy; 2024-2026 ToprakBZK. There were no rights.
+        &copy; 2024-2026 ToprakBZK. Released under the MIT License.
     </footer>
 </body>
 </html>

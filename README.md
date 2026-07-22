@@ -1,5 +1,7 @@
 # Modern Chrome for Windows 7 and 8 and 8.1
 
+https://toprakbzk.github.io/Modern-Chrome-For-Windows-7-and-8.1
+
 This repository contains a modified version of **Chromium** that has been patched to run on **Windows 8.1 and 8 and 7**, which is no longer officially supported by Google.
 
 > ⚠️ Disclaimer: This project is not affiliated with or endorsed by Google. Use at your own risk.

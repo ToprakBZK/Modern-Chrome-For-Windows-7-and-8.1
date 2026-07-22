@@ -31,9 +31,17 @@
 
         h1 {
             font-size: 32px;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             color: #a020f0;
             text-align: center;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: #b388ff;
+            margin-bottom: 30px;
+            text-align: center;
+            max-width: 600px;
         }
 
         .grid {
@@ -107,11 +115,41 @@
             opacity: 0.9;
         }
 
+        /* Feature Section */
+        .features-container {
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .feature-box {
+            background-color: #230542;
+            padding: 18px;
+            border-radius: 8px;
+            border-left: 4px solid #a020f0;
+        }
+
+        .feature-box h3 {
+            margin: 0 0 8px 0;
+            font-size: 16px;
+            color: #d0bcff;
+        }
+
+        .feature-box p {
+            margin: 0;
+            font-size: 14px;
+            color: #ccc;
+            line-height: 1.4;
+        }
+
         /* FAQ Section */
         .faq-container {
             width: 100%;
             max-width: 1000px;
-            margin-top: 40px;
+            margin-top: 30px;
             background-color: #260646;
             border-radius: 8px;
             padding: 25px;
@@ -159,6 +197,7 @@
 <body>
     <img src="mor_logo.png" alt="Modern Chrome Logo" class="logo">
     <h1>Modern Chrome for Windows 7, 8 and 8.1</h1>
+    <div class="tagline">Run modern, secure Chromium builds natively on legacy Windows operating systems without kernel modifications.</div>
 
     <div class="grid">
         <div class="tile">
@@ -181,6 +220,21 @@
             <h2>Source & Notes</h2>
             <p>Check release notes and build details on GitHub.</p>
             <a class="download-button" href="https://github.com/ToprakBZK/Modern-Chrome-For-Windows-7-and-8.1" target="_blank">GitHub Repository</a>
+        </div>
+    </div>
+
+    <div class="features-container">
+        <div class="feature-box">
+            <h3>Full Google Sync</h3>
+            <p>Sign in with your Google account seamlessly. Bookmarks, history, and passwords stay synchronized.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Chrome Web Store</h3>
+            <p>Install and use modern Chrome extensions without compatibility errors.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Zero System Mods</h3>
+            <p>Operates without altering critical system binaries or requiring custom system kernels.</p>
         </div>
     </div>
 

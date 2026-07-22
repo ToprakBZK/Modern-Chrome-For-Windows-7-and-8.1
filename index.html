@@ -5,204 +5,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Chrome for Windows 7 & 8.1</title>
     <link rel="icon" type="image/png" href="mor_logo.png">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --md-sys-color-background: #141218;
-            --md-sys-color-surface: #211f26;
-            --md-sys-color-surface-variant: #2b2930;
-            --md-sys-color-primary: #d0bcff;
-            --md-sys-color-on-primary: #381e72;
-            --md-sys-color-primary-container: #4f378b;
-            --md-sys-color-on-primary-container: #eaddff;
-            --md-sys-color-on-surface: #e6e0e9;
-            --md-sys-color-on-surface-variant: #cac4d0;
-            --md-radius-large: 28px;
-            --md-radius-medium: 16px;
-            --md-radius-full: 100px;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: var(--md-sys-color-background);
-            color: var(--md-sys-color-on-surface);
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #1c1c1c;
+            color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-            padding: 60px 20px;
-        }
-
-        .hero {
-            text-align: center;
-            max-width: 800px;
-            margin-bottom: 48px;
+            padding: 40px 10px;
         }
 
         .logo {
-            width: 96px;
-            height: 96px;
-            margin-bottom: 24px;
-            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 2.5rem;
-            font-weight: 500;
-            color: var(--md-sys-color-primary);
-            margin-bottom: 12px;
-            line-height: 1.2;
-        }
-
-        .subtitle {
-            font-size: 1.1rem;
-            color: var(--md-sys-color-on-surface-variant);
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: #a020f0;
+            text-align: center;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
             width: 100%;
-            max-width: 1080px;
+            max-width: 1000px;
         }
 
-        .card {
-            background-color: var(--md-sys-color-surface);
-            border-radius: var(--md-radius-large);
-            padding: 32px 24px;
+        .tile {
+            background-color: #2e0854;
+            border-radius: 8px;
+            padding: 20px;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
             text-align: center;
-            border: 1px solid var(--md-sys-color-surface-variant);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+            transition: transform 0.2s, background-color 0.3s;
         }
 
-        .card:hover {
-            transform: translateY(-4px);
-            background-color: var(--md-sys-color-surface-variant);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+        .tile:hover {
+            background-color: #3b0a6b;
         }
 
-        .card-icon {
-            font-size: 36px;
-            color: var(--md-sys-color-primary);
-            margin-bottom: 16px;
+        .tile h2 {
+            margin-bottom: 15px;
+            font-size: 22px;
         }
 
-        .card h2 {
-            font-size: 1.4rem;
-            font-weight: 500;
-            margin-bottom: 12px;
-            color: var(--md-sys-color-on-surface);
+        .tile p {
+            font-size: 16px;
+            line-height: 1.5;
         }
 
-        .card p {
-            font-size: 0.95rem;
-            color: var(--md-sys-color-on-surface-variant);
-            line-height: 1.6;
-            flex-grow: 1;
-            margin-bottom: 24px;
-        }
-
-        .btn-material {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background-color: var(--md-sys-color-primary);
-            color: var(--md-sys-color-on-primary);
-            padding: 14px 28px;
-            border-radius: var(--md-radius-full);
-            font-size: 0.95rem;
-            font-weight: 500;
+        .download-button {
+            background-color: #6a0dad;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            margin-top: 15px;
+            cursor: pointer;
             text-decoration: none;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+            transition: background-color 0.2s;
         }
 
-        .btn-material:hover {
-            background-color: var(--md-sys-color-on-primary-container);
-            color: var(--md-sys-color-on-primary-container);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-        }
-
-        .btn-material .material-symbols-outlined {
-            font-size: 20px;
-        }
-
-        .btn-tonal {
-            background-color: var(--md-sys-color-primary-container);
-            color: var(--md-sys-color-on-primary-container);
-        }
-
-        .btn-tonal:hover {
-            background-color: #634b9f;
+        .download-button:hover {
+            background-color: #8a2be2;
         }
 
         footer {
-            margin-top: 64px;
-            font-size: 0.85rem;
-            color: var(--md-sys-color-on-surface-variant);
+            margin-top: 40px;
+            font-size: 14px;
+            color: gray;
             text-align: center;
         }
     </style>
 </head>
 <body>
-
-    <div class="hero">
-        <img src="mor_logo.png" alt="Modern Chrome Logo" class="logo">
-        <h1>Modern Chrome for Windows 7 & 8.1</h1>
-        <p class="subtitle">Experience modern web browsing on legacy systems without limits.</p>
-    </div>
+    <img src="mor_logo.png" alt="Modern Chrome Logo" class="logo">
+    <h1>Modern Chrome for Windows 7, 8 and 8.1</h1>
 
     <div class="grid">
-        <div class="card">
-            <span class="material-symbols-outlined card-icon">computer</span>
+        <div class="tile">
             <h2>System Requirements</h2>
             <p>
                 Windows 7 / 8 / 8.1 (x86 & x64)<br>
-                Minimum 2 GB RAM<br>
-                No kernel patching required
+                2 GB of RAM<br>
+                No kernel patches required
             </p>
         </div>
 
-        <div class="card">
-            <span class="material-symbols-outlined card-icon">download</span>
+        <div class="tile">
             <h2>Download</h2>
-            <p>Get the latest modified Chromium build tailored for your setup.</p>
-            <a class="btn-material" href="https://github.com/ToprakBZK/Modern-Chrome-For-Windows-7-and-8.1/releases" target="_blank">
-                <span class="material-symbols-outlined">download</span>
-                Get Releases
-            </a>
+            <p>Get the latest working build for legacy Windows.</p>
+            <a class="download-button" href="https://github.com/ToprakBZK/Modern-Chrome-For-Windows-7-and-8.1/releases" target="_blank">Download Releases</a>
         </div>
 
-        <div class="card">
-            <span class="material-symbols-outlined card-icon">code</span>
+        <div class="tile">
             <h2>Source & Notes</h2>
-            <p>Explore source code, release logs, and submit issues on GitHub.</p>
-            <a class="btn-material btn-tonal" href="https://github.com/ToprakBZK/Modern-Chrome-For-Windows-7-and-8.1" target="_blank">
-                <span class="material-symbols-outlined">open_in_new</span>
-                GitHub Repo
-            </a>
+            <p>Check release notes and build details on GitHub.</p>
+            <a class="download-button" href="https://github.com/ToprakBZK/Modern-Chrome-For-Windows-7-and-8.1" target="_blank">GitHub Repository</a>
         </div>
     </div>
 
     <footer>
         &copy; 2024-2026 ToprakBZK. Released under the MIT License.
     </footer>
-
 </body>
 </html>

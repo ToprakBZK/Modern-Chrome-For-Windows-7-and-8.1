@@ -22,6 +22,11 @@
             width: 120px;
             height: auto;
             margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         h1 {
@@ -48,11 +53,13 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            transition: transform 0.2s, background-color 0.3s;
+            transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.3s, box-shadow 0.3s;
         }
 
         .tile:hover {
             background-color: #3b0a6b;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
 
         .tile h2 {
@@ -76,11 +83,69 @@
             margin-top: 15px;
             cursor: pointer;
             text-decoration: none;
-            transition: background-color 0.2s;
+            transition: background-color 0.2s, transform 0.1s;
         }
 
         .download-button:hover {
             background-color: #8a2be2;
+        }
+
+        .download-button:active {
+            transform: scale(0.97);
+        }
+
+        .vt-link {
+            color: #b388ff;
+            text-decoration: none;
+            font-size: 13px;
+            margin-top: 12px;
+            transition: opacity 0.2s;
+        }
+
+        .vt-link:hover {
+            text-decoration: underline;
+            opacity: 0.9;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            width: 100%;
+            max-width: 1000px;
+            margin-top: 40px;
+            background-color: #260646;
+            border-radius: 8px;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+        .faq-title {
+            color: #a020f0;
+            font-size: 22px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faq-item {
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .faq-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-question {
+            font-size: 16px;
+            font-weight: 600;
+            color: #d0bcff;
+            margin-bottom: 6px;
+        }
+
+        .faq-answer {
+            font-size: 14px;
+            color: #cccccc;
+            line-height: 1.5;
+            margin: 0;
         }
 
         footer {
@@ -109,12 +174,27 @@
             <h2>Download</h2>
             <p>Get the latest working build for legacy Windows.</p>
             <a class="download-button" href="https://github.com/ToprakBZK/Modern-Chrome-For-Windows-7-and-8.1/releases" target="_blank">Download Releases</a>
+            <a class="vt-link" href="https://www.virustotal.com/gui/file/3618676d4cc0ae45a3eb65559fd534a448bf752c3f99d5ed7fe5ad6bed09ca1f" target="_blank">VirusTotal Report (2/60 False Positive)</a>
         </div>
 
         <div class="tile">
             <h2>Source & Notes</h2>
             <p>Check release notes and build details on GitHub.</p>
             <a class="download-button" href="https://github.com/ToprakBZK/Modern-Chrome-For-Windows-7-and-8.1" target="_blank">GitHub Repository</a>
+        </div>
+    </div>
+
+    <div class="faq-container">
+        <div class="faq-title">Frequently Asked Questions</div>
+
+        <div class="faq-item">
+            <div class="faq-question">Does Google Sync work?</div>
+            <div class="faq-answer">Yes, signing in with your Google account and syncing bookmarks, history, and extensions works properly.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">Why do a few antiviruses flag this build?</div>
+            <div class="faq-answer">Modifying binaries to retain legacy Windows support can trigger false positives in generic machine-learning scanners. Major antivirus engines confirm the files are safe.</div>
         </div>
     </div>
 
